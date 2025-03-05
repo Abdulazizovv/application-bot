@@ -1,3 +1,3 @@
-from .category import home
-from .main_menu import kb_menu
-from .cancel_btn import kb_cancel
+from .main_menu import main_menu_kb
+from .full_name import full_name_keyboard
+from .send_phone import send_phone_keyboard

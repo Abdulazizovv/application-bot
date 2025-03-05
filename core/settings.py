@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     # Local apps
     'botapp',
     'main',
+
+    # third party apps
 ]
 
 MIDDLEWARE = [
@@ -109,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Samarkand'
 
 USE_I18N = True
 

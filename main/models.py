@@ -21,6 +21,10 @@ class Application(models.Model):
     # Ariza yuboruvchi haqida batafsil ma'lumot
     about = models.TextField()
 
+    # Ariza yuboruvchi rezyume fayli
+    resume_file_id = models.CharField(max_length=255)
+    resume_file_link = models.URLField(null=True, blank=True)
+
     # Ariza yuborilgan vaqti
     created_at = models.DateTimeField(auto_now_add=True)
 

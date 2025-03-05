@@ -2,6 +2,7 @@ from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from bot.loader import dp
 from bot.utils.db_api.db import get_or_create_user
+from bot.keyboards.default import main_menu_kb
 
 
 @dp.message_handler(CommandStart())
@@ -19,12 +20,14 @@ async def bot_start(message: types.Message):
         await message.answer(
             f"Assalomu alaykum, {message.from_user.full_name}!\n"
             "Botimizga xush kelibsiz!\n"
-            "Bot orqali siz bizga ma'lumotlaringizni yuborishingiz mumkin.\n"
+            "Bot orqali siz bizga ma'lumotlaringizni yuborishingiz mumkin.\n",
+            reply_markup=main_menu_kb
         )
     else:
         await message.answer(
             f"Assalomu alaykum, {message.from_user.full_name}!\n"
-            "Sizni yana ko'rib turganimizdan xursandmiz\n"
+            "Sizni yana ko'rib turganimizdan xursandmiz\n",
+            reply_markup=main_menu_kb
         )
 
 
