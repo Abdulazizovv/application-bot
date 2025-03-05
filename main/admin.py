@@ -1,0 +1,12 @@
+from django.contrib import admin
+from .models import Application
+
+
+class ApplicationAdmin(admin.ModelAdmin):
+    list_display = ('user', 'full_name')
+    list_filter = ('user', 'full_name')
+    search_fields = ('user', 'full_name')
+    list_per_page = 50
+
+
+admin.site.register(Application, ApplicationAdmin)

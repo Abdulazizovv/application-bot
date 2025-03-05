@@ -44,4 +44,3 @@ class BotUser(models.Model):
         verbose_name = 'Bot User'
         verbose_name_plural = 'Bot Users'
         ordering = ['-created_at']
-
